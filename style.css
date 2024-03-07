@@ -1,0 +1,673 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+.skill-card {
+    width: calc(33.33% - 20px); /* Adjust the width to fit three items per row */
+    margin-bottom: 20px; /* Space between rows */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-card p {
+    margin-top: 10px; /* Space between the image/SVG and the caption */
+}
+
+.tech-logos {
+    max-width: 100%;
+    height: auto;
+}
+/* Add this CSS to your style.css file */
+.tab-contents {
+    display: none; /* Hide all tab contents by default */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 500px; /* Adjust based on your preference */
+    margin: auto;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+/* Shared Card Styling */
+.card {
+
+    color: #fff; /* White text for readability */
+    margin-top: 20px; /* Spacing from the top or previous card */
+    padding: 20px; /* Padding inside the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Subtle shadow */
+}
+
+/* Subtitle Styling */
+.sub-title {
+    color: #ff004f; /* Accent color for titles */
+    margin-bottom: 15px; /* Spacing below the title */
+}
+
+/* Fun Facts Specific Styling */
+.fun-facts ul {
+    list-style-type: none; /* Removes default list bullet */
+    padding: 0; /* Removes default padding */
+}
+
+.fun-facts ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+.fun-facts ul li strong {
+    color: #ff004f; /* Accent color for strong text */
+}
+
+
+.tech-logos {
+    width: 220px; /* Adjust width as needed */
+    
+  }
+  
+.ideas {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-top: 10px; /* Adjust the top margin to create space between the image and the text */
+    text-align: center; /* Align the text to the center */
+    padding: 5px; /* Add padding to the text */
+}
+.profile-pic {
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Make sure width and height are equal for a perfect circle */
+    border-radius: 50%; /* This creates the circular shape */
+    object-fit: cover; /* Ensures the image covers the space without being distorted */
+    display: block; /* Makes the image a block element */
+    margin: 20px auto; /* Centers the image horizontally and adds some space above and below */
+}
+
+@keyframes glow {
+    0%, 95% {
+        text-shadow: 0 0 8px rgba(255, 0, 79, 0.7), 0 0 10px rgba(255, 0, 79, 0.7), 0 0 12px rgba(255, 0, 79, 0.7);
+    }
+    30% {
+        text-shadow: 0 0 20px rgba(255, 0, 79, 0.9), 0 0 30px rgba(255, 0, 79, 0.9), 0 0 40px rgba(255, 0, 79, 0.9);
+    }
+}
+h2{
+    margin-top: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.header-text {
+    animation: float 4s ease-in-out infinite;
+}
+
+.header-text h1 span {
+    animation: glow 2s ease-in-out infinite;
+}
+
+
+#experience {
+    display: block; /* Show Career Experience tab content by default */
+}
+
+
+
+
+
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 5%;
+    font-size: 20px;
+    text-align: center;
+}
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+/* -----------about--------------- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.about-col-1 {
+    width: 40%; /* Adjust the width as needed */
+    float: left; /* Float the first column to the left */
+}
+
+.about-col-2 {
+    width: 60%; /* Adjust the width as needed */
+    float: left; /* Float the second column to the left */
+    padding-left: 20px; /* Add padding to create space between the two columns */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.about-col-1,
+.about-col-2 {
+    margin-right: 10px; /* Add margin to the right of .about-col-1 */
+}
+
+.about-col-2 {
+    margin-left: 10px; /* Add margin to the left of .about-col-2 */
+    height: 110%; /* Set a fixed height */
+    overflow-y: auto; 
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 .profile-pic {
+    width: 450px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about-col-1 img {
+    display: block;
+    width: 145px; /* Adjust to fit within the container, 100% or less */
+    max-width: 600px; /* Optional: you can set a max-width if you want */
+    margin: 0 auto; /* Auto margins to center the image */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+
+.about-col-2 {
+    flex-basis: 60%;
+    background-color: #000000; /* Glowing blue color */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding for content */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Glowing effect */
+    border-radius: 10px; /* Rounded corners */
+    float: left; /* Floating to the left */
+    margin-left: 80px;
+}
+/* CSS */
+#contact .contact-left p:nth-of-type(2) {
+    /* Apply styling to the second <p> tag within .contact-left */
+    /* For example, change font color */
+    margin-left: 25px;
+}
+/* CSS */
+#contact .contact-left p:nth-of-type(2):contains("ronilpatel1001@gmail.com") {
+    /* Apply styling to the <p> tag containing the email address */
+    /* For example, change font color */
+    margin-left: 25px;
+}
+
+
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center; /* Centers the text */
+    animation: float 5s ease-in-out infinite; /* Applies a floating effect */
+    /* margin-right: 75px; */
+    
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+
+
+/* Shared Styles for Main and Nested Tab Links */
+.tab-links, .nested-tab-links {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s, text-shadow 0.3s; /* Ensure smooth transitions */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 20px; /* Adjust the right margin */
+    display: inline-block; /* Use inline-block for layout */
+    color: #ff004f; /* Initial color for both */
+}
+
+.tab-links:hover, .nested-tab-links:hover {
+    color: #ff004f; /* Hover color */
+    text-shadow: 0 0 10px #ff004f, 0 0 20px #ff004f, 0 0 30px #ff004f, 0 0 40px #ff004f, 0 0 50px #ff004f, 0 0 60px #ff004f; /* Glowing effect */
+}
+
+.tab-links:hover::after, .nested-tab-links:hover::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: width 0.5s;
+}
+
+.tab-links.active-link::after, .nested-tab-links.active-link::after {
+    width: 50%; /* Underline effect for active tab */
+}
+
+/* Specific Styles for Nested Tabs */
+.nested-tab-titles {
+    margin: 20px 0; /* Adjust top and bottom margin for nested tab titles */
+    display: flex; /* Use flexbox for layout */
+}
+
+
+.nested-tab-contents {
+    display: none; /* Initially hide all nested tab content */
+}
+
+.nested-tab-contents.active-tab {
+    display: block; /* Display active nested tab content */
+}
+
+
+
+/* ----------------services------------- */
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+/* -------portfolio----------- */
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+   transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+/* ---------contact-------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+    margin-left: 25px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #ff004f;
+}
+.copyright a{
+    color: #ff004f;
+    text-decoration: none;
+}
+/* -----------------css for small screens--------- */
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+/* Container for the "About Me" text */
+.about-col-2 {
+    text-align: center; /* Center the title and text */
+    margin-bottom: 50px; /* Adds space between the text and tab links */
+}
+
+/* Styles for the tab titles container */
+/* Add this CSS to your style.css file */
+.tab-titles {
+    display: flex; /* Set display to flex to arrange items side by side */
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    align-items: center; /* Center items vertically */
+}
+
+.tab-links {
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about-col-1 {
+    flex: 1; /* Allow the "Who Am I" box to take up remaining space */
+    margin-right: 20px; /* Add some margin to the right to separate it from the tabs */
+}
+
+
+.tab-links {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px; /* Add padding for a larger clickable area */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff; /* Set the color of the tab links */
+    border-radius: 5px; /* Optional: adds rounded corners to the tab links */
+}
+
+.tab-links:hover, .tab-links.active-link {
+    background-color: #ff004f; /* Highlight color on hover/active */
+    color: #ffffff;
+}
+
+.tab-contents {
+    text-align: left; /* Aligns the content of the tabs to the left */
+    padding: 20px; /* Adds padding around the content for spacing */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .tab-titles {
+        flex-direction: column; /* Stacks the tabs vertically on smaller screens */
+    }
+}
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
