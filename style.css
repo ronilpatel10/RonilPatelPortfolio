@@ -116,6 +116,7 @@
     margin-top: 10px; /* Adjust the top margin to create space between the image and the text */
     text-align: center; /* Align the text to the center */
     padding: 5px; /* Add padding to the text */
+    margin-bottom: 15px;
 }
 .profile-pic {
     width: 300px; /* Adjust the size as needed */
@@ -266,8 +267,9 @@ nav ul li a:hover::after{
     flex-basis: 35%;
 }
 .about-col-1 .profile-pic {
-    width: 450px; /* Adjust the width as needed */
+    width: 500px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
+    margin-bottom: 25px;
 }
 
 .about-col-1 img {
