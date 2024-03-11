@@ -7,6 +7,7 @@
     <title>Portfolio - Ronil Patel</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+ 
 </head>
 <body>
 <div id="header">
@@ -24,40 +25,33 @@
 </div>
 
 <!-- Portfolio Section -->
-<!-- Portfolio Section -->
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Technical Projects</h1>
+        <p class="port-text">**Click the video below to see the live demo and make sure to click the full screen button to get the full experience!**</p>
         <div class="work-list">
+            <video controls class="tech-logos" id="portfolio-video">
+                <source src="images/video_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="cards">
             <div class="work">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-                <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>The app connects you to talented people around the world. Download it from the app store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-                <div class="layer">
-                    <h3>Music App</h3>
-                    <p>The app connects you to talented people around the world. Download it from the app store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
-                <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>The app connects you to talented people around the world. Download it from the app store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
+                <button class="show-details-btn">Show Details</button>
+                <ul class="portfolio-details">
+                    <li>Classic Gameplay with a Twist: Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</li>
+                    <li>Dynamic Maze Generation: Each playthrough offers a unique maze layout, ensuring fresh challenges and endless replayability. Navigate through narrow corridors and open spaces while avoiding dead ends and obstacles.</li>
+                    <li>Power-ups and Abilities: Discover power-ups scattered throughout the maze, granting temporary boosts and abilities. Double your score, unlock rainbow mode for colorful visuals, and more. Choose when to activate these power-ups strategically to maximize your score.</li>
+                    <li>Immersive Visuals and Sound: Immerse yourself in vibrant, visually appealing graphics and animations. From lush maze environments to sleek snake animations, every detail enhances the gaming experience. Dynamic sound effects and background music further elevate the immersion, creating an engaging auditory experience.</li>
+                    <li>Highscore Tracking: Compete against yourself and other players by aiming for the highest score. Track your progress and achievements as you strive to climb the leaderboard and cement your place as the ultimate maze master.</li>
+                    <li>Intuitive Controls and User Interface: Enjoy seamless gameplay with intuitive controls designed for ease of use. Navigate menus and options effortlessly, allowing you to focus on the action-packed gameplay without distractions.</li>
+                    <li>Customizable Settings: Tailor your gaming experience to your preferences with customizable settings. Adjust audio, graphics, and control options to suit your playstyle and device specifications.</li>
+                    <li>Multi-platform Compatibility: Play Snake Adventure: Maze Mayhem across a variety of platforms, including PC, mobile devices, and gaming consoles. Seamlessly switch between devices without losing progress, ensuring you can enjoy the game anytime, anywhere.</li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
-
-
 
 <div id="contact">
     <div class="container">
@@ -89,15 +83,33 @@
         <p>Portfolio <i class="fas fa-heart"></i> by Ronil Patel</a></p>
     </div>
 </div>
-    
-    <script>
-        var sidemeu = document.getElementById("sidemenu");
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const showDetailsBtn = document.querySelector(".show-details-btn");
+        const portfolioDetails = document.querySelector(".portfolio-details");
+
+        showDetailsBtn.addEventListener("click", function() {
+            portfolioDetails.classList.toggle("visible");
+            if (portfolioDetails.classList.contains("visible")) {
+                showDetailsBtn.textContent = "Show Less";
+            } else {
+                showDetailsBtn.textContent = "Show Details";
+            }
+        });
+    });
+</script>
+
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
         
-    function openmenu(){
-        sidemeu.style.right = "0";
+    function openmenu() {
+        sidemenu.style.right = "0";
     }
-    function closemenu(){
-        sidemeu.style.right = "-200px";
+    
+    function closemenu() {
+        sidemenu.style.right = "-200px";
     }
 </script>
 </body>
