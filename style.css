@@ -4,6 +4,68 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+/* Container holding all projects */
+#portfolio .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    
+    flex-wrap: wrap;
+    justify-content: space-around; /* Adjusts the distribution of child elements */
+  }
+  
+  /* Individual project container */
+  .work-list, #cards {
+  
+    max-width: 48%; /* Ensures no more than two projects per row and provides some gap */
+    margin-bottom: 20px; /* Adds space between rows of projects */
+  }
+  
+  .work {
+ 
+    padding: 20px;
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+  }
+  
+  /* Styling for the "Show Details" button */
+  .show-details-btn {
+    background-color: #007bff; /* Primary button color */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .show-details-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Portfolio details list */
+  .portfolio-details {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: none; /* Hide details by default */
+  }
+  
+  /* When details are visible */
+  .portfolio-details.visible {
+    display: block; /* Show details */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .work-list, #cards {
+      max-width: 100%; /* Each project takes full width on smaller screens */
+    }
+  }
+  
+
 /* Custom CSS for portfolio details */
 .portfolio-details {
     display: none;
@@ -41,7 +103,13 @@
 
 .port-text{
     text-align: center;
+    color: #fff; /* White text color */
+    
+
 }
+
+
+
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -352,10 +420,12 @@ nav ul li a:hover::after{
     
 }
 
+
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
 }
+
 
 
 
@@ -464,6 +534,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    margin-top: 10px;
 }
 .work img{
     width: 100%;

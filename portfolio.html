@@ -28,18 +28,18 @@
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Technical Projects</h1>
-        <p class="port-text">**Click the video below to see the live demo and make sure to click the full screen button to get the full experience!**</p>
+        <h2 class="port-text">⭐️⭐️Click the video below to see the live demo (stick to end to hear about the code!) and make sure to click the full screen button and change the resolution if needed to get the full experience!⭐️⭐️</h2>
         <div class="work-list">
-            <video controls class="tech-logos" id="portfolio-video">
-                <source src="images/video_1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            
+            <iframe src="https://drive.google.com/file/d/10wf--RQcfxglgMlfv-gJd_bOc6-jw9t2/preview" width="640" height="480" allowfullscreen></iframe>
+            
         </div>
         <div id="cards">
-            <div class="work">
+            <div class="work"> 
+                <p>Project: Serphant Safari🐍 - Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</p>
                 <button class="show-details-btn">Show Details</button>
                 <ul class="portfolio-details">
-                    <li>Classic Gameplay with a Twist: Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</li>
+                   
                     <li>Dynamic Maze Generation: Each playthrough offers a unique maze layout, ensuring fresh challenges and endless replayability. Navigate through narrow corridors and open spaces while avoiding dead ends and obstacles.</li>
                     <li>Power-ups and Abilities: Discover power-ups scattered throughout the maze, granting temporary boosts and abilities. Double your score, unlock rainbow mode for colorful visuals, and more. Choose when to activate these power-ups strategically to maximize your score.</li>
                     <li>Immersive Visuals and Sound: Immerse yourself in vibrant, visually appealing graphics and animations. From lush maze environments to sleek snake animations, every detail enhances the gaming experience. Dynamic sound effects and background music further elevate the immersion, creating an engaging auditory experience.</li>
@@ -51,7 +51,26 @@
             </div>
         </div>
     </div>
+            <div class="work-list">
+                <!-- Number Guesser Video -->
+                <iframe src="https://drive.google.com/file/d/1x-vjUiZJkEdkwrf_nRa-Z6xVvT_q53C5/preview" width="640" height="480" allowfullscreen></iframe>
+            </div>
+            <div id="cards">
+                <div class="work">
+                    <!-- Updated button with onclick attribute for toggling details --><p>Project: Number Guesser🤯 - A console application that challenges users to guess a randomly generated number within a specified range.</p>
+                    <button class="show-details-btn" onclick="toggleDetails('numberGuesserDetails')">Show Details</button>
+                    <ul class="portfolio-details" id="numberGuesserDetails" style="display:none;">
+                        <!-- Your project details here -->
+                        <li>Features multiple difficulty levels, robust input validation, and a structured approach to programming.</li>
+                        <li>Highlights the importance of user interaction, clear code structure, and the .NET framework's capabilities.</li>
+                        <li>Reflects on learnings about software development, emphasizing code readability, maintainability, and user experience.</li>
+                        <li>For more insights, including a code walkthrough and live demo, check the video above.</li>
+                    </ul>
+                </div>
+            </div>
 </div>
+
+
 
 <div id="contact">
     <div class="container">
@@ -112,5 +131,17 @@
         sidemenu.style.right = "-200px";
     }
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        window.toggleDetails = function(detailsId) {
+            var detailsElement = document.getElementById(detailsId);
+            var isVisible = detailsElement.style.display === "block";
+            detailsElement.style.display = isVisible ? "none" : "block";
+            // Update the button text based on the visibility state
+            detailsElement.previousElementSibling.textContent = isVisible ? "Show Details" : "Show Less";
+        };
+    });
+    </script>
+    
 </body>
 </html>
