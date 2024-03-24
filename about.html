@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -19,7 +19,6 @@
                 <ul id="sidemenu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="#services">Services</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -38,8 +37,8 @@
                     <div class="tab-titles">
                         <!-- Add your resume sections as tab titles -->
                         <p class="tab-links active-link" onclick="opentab('experience')">Career Exp.</p>
-                        <p class="tab-links" onclick="opentab('skills')">Tech. Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Edu.</p>
+                        <p class="tab-links" onclick="opentab('skills')">|Tech Skills| </p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                         
                     </div>
                     <!-- Replace the placeholder image with your profile picture -->
@@ -66,9 +65,9 @@
                     <div class="tab-contents" id="skills">
                         <h2>Technical Skills</h2>
                         <div class="nested-tab-titles">
-                            <p class="nested-tab-links" onclick="openNestedTab(event, 'FrontEnd')">Front-end</p>
-                            <p class="nested-tab-links" onclick="openNestedTab(event, 'BackEnd')">Back-end</p>
-                            <p class="nested-tab-links" onclick="openNestedTab(event, 'AllSkills')">All Skills</p>
+                            <p class="nested-tab-links" onclick="openNestedTab(event, 'FrontEnd')">Front-end |</p>
+                            <p class="nested-tab-links" onclick="openNestedTab(event, 'BackEnd')">Back-end |</p>
+                            <p class="nested-tab-links" onclick="openNestedTab(event, 'AllSkills')">Tech Skills</p>
                         </div>
                         <div class="nested-tab-contents" id="FrontEnd">
                             <!-- Front-end skills here -->
@@ -91,6 +90,14 @@
                             <div class="skill-card">
                                 <img src="images/aws.png" alt="AWS Logo" class="tech-logos">
                                 <p>AWS</p>
+                            </div>
+                            <div class="skill-card">
+                                <img src="images/c--4.svg" alt="c# Logo" class="tech-logos">
+                                <p>C#</p>
+                            </div>
+                            <div class="skill-card">
+                                <img src="images/nodejs.svg" alt="Node.js Logo" class="tech-logos">
+                                <p>Node.js</p>
                             </div>
                             <div class="skill-card">
                                 <img src="images/mongos.png" alt="MongoDB Logo" class="tech-logos">
@@ -194,23 +201,26 @@
                 <p><i class="fas fa-phone-square-alt"></i> (803)-729-6552</p>
                 <div class="social-icons">
                     <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <!-- Updated Form for Netlify -->
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
         </div>
     </div>
+</div>
     <div class="copyright">
         <p>Portfolio <i class="fas fa-heart"></i> by Ronil Patel</a></p>
     </div>

@@ -16,7 +16,6 @@
             <ul id="sidemenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio.html">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -28,15 +27,15 @@
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Technical Projects</h1>
-        <h2 class="port-text">⭐️⭐️Click the video below to see the live demo (stick to end to hear about the code!) and make sure to click the full screen button and change the resolution if needed to get the full experience!⭐️⭐️</h2>
+        <h2 class="port-text">⭐️⭐️Click the videos below to see the live demo (stick to end to hear about the code!) and make sure to click the full screen button and change the resolution if needed to get the full experience!⭐️⭐️</h2>
         <div class="work-list">
+        </div>  
             
-            <iframe src="https://drive.google.com/file/d/10wf--RQcfxglgMlfv-gJd_bOc6-jw9t2/preview" width="640" height="480" allowfullscreen></iframe>
-            
-        </div>
-        <div id="cards">
+</div>
+<div id="cards">
+            <iframe src="https://drive.google.com/file/d/19rGiQiPzhE7gnFzB7GuoTrgGJf-j6uoi/preview" width="640" height="480" allowfullscreen></iframe>
             <div class="work"> 
-                <p>Project: Serphant Safari🐍 - Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</p>
+                <p>Project: Serpent Safari🐍 - Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</p>
                 <button class="show-details-btn">Show Details</button>
                 <ul class="portfolio-details">
                    
@@ -49,25 +48,54 @@
                     <li>Multi-platform Compatibility: Play Snake Adventure: Maze Mayhem across a variety of platforms, including PC, mobile devices, and gaming consoles. Seamlessly switch between devices without losing progress, ensuring you can enjoy the game anytime, anywhere.</li>
                 </ul>
             </div>
+            
+            <a class = "github-link" href="https://github.com/ronilpatel10/phase3-project" target="_blank" rel="noopener noreferrer">
+                <h4>To see the Repository on the GitHub Click Below!</h4><img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+              </a>
         </div>
+        
+        <!-- Number Guesser Video -->
+        <div id="cards">
+        <iframe src="https://drive.google.com/file/d/14VhwhfJRwP_wOUMPVHFP_jMp1qzOG1PH/preview" width="640" height="480" allowfullscreen></iframe>
+    
+        <div class="work">
+            <!-- Updated button with onclick attribute for toggling details --><p>Project: Number Guesser🤨- A console application that challenges users to guess a randomly generated number within a specified range.</p>
+            <button class="show-details-btn" onclick="toggleDetails('numberGuesserDetails')">Show Details</button>
+            <ul class="portfolio-details" id="numberGuesserDetails" style="display:none;">
+                <!-- Your project details here -->
+                <li>Features multiple difficulty levels, robust input validation, and a structured approach to programming.</li>
+                <li>Highlights the importance of user interaction, clear code structure, and the .NET framework's capabilities.</li>
+                <li>Reflects on learnings about software development, emphasizing code readability, maintainability, and user experience.</li>
+                <li>For more insights, including a code walkthrough and live demo, check the video above.</li>
+            </ul>
+        </div>
+        <a class = "github-link" href="https://github.com/ronilpatel10/SharpProject" target="_blank" rel="noopener noreferrer">
+            <h4>To see the Repository on the GitHub Click Below!</h4><img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+          </a>
     </div>
-            <div class="work-list">
-                <!-- Number Guesser Video -->
-                <iframe src="https://drive.google.com/file/d/1x-vjUiZJkEdkwrf_nRa-Z6xVvT_q53C5/preview" width="640" height="480" allowfullscreen></iframe>
-            </div>
-            <div id="cards">
-                <div class="work">
-                    <!-- Updated button with onclick attribute for toggling details --><p>Project: Number Guesser🤯 - A console application that challenges users to guess a randomly generated number within a specified range.</p>
-                    <button class="show-details-btn" onclick="toggleDetails('numberGuesserDetails')">Show Details</button>
-                    <ul class="portfolio-details" id="numberGuesserDetails" style="display:none;">
-                        <!-- Your project details here -->
-                        <li>Features multiple difficulty levels, robust input validation, and a structured approach to programming.</li>
-                        <li>Highlights the importance of user interaction, clear code structure, and the .NET framework's capabilities.</li>
-                        <li>Reflects on learnings about software development, emphasizing code readability, maintainability, and user experience.</li>
-                        <li>For more insights, including a code walkthrough and live demo, check the video above.</li>
-                    </ul>
-                </div>
-            </div>
+    <div id="cards">
+        <iframe src="https://drive.google.com/file/d/1sIb2mdWE6gtHcRfdqpkgdUaYds2I4Y-f/preview" width="640" height="480" allowfullscreen></iframe>
+        <div class="work">
+            <p>Project: ShoeScope👟 - A web platform dedicated to sneaker enthusiasts and custom shoe designers.</p>
+            <button class="show-details-btn" onclick="toggleDetails('shoeScopeDetails')">Show Details</button>
+            <ul class="portfolio-details" id="shoeScopeDetails" style="display:none;">
+                <li>Enables users to post their custom shoe designs, share photos, and details about the creation process.</li>
+                <li>Features a user rating system, allowing the community to vote on their favorite designs.</li>
+                <li>Incorporates a robust search and filtering system to explore shoes based on style, color, designer, and popularity.</li>
+                <li>Supports user accounts with profile customization, showcasing their designs and interacting with followers.</li>
+                <li>Highlights include a responsive design for mobile and desktop views, ensuring accessibility and user engagement.</li>
+                <li>Technologies Used: React.js for the frontend, SQLite3 for the backend. Cloudinary is used for image storage and management.</li>
+                <li>The project emphasizes modern web development practices, including RESTful API design, security considerations with JWT authentication, and user experience design principles.</li>
+                <li>For more insights, including a code walkthrough and live demo, check the video above.</li>
+            </ul>
+            
+        </div>
+        <a class = "github-link" href="https://github.com/ronilpatel10/Shoe-project-2" target="_blank" rel="noopener noreferrer">
+            <h4>To see the Repository on the GitHub Click Below!</h4><img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+          </a>
+    </div>
+    </div>
+            
 </div>
 
 
@@ -81,27 +109,29 @@
                 <p><i class="fas fa-phone-square-alt"></i> (803)-729-6552</p>
                 <div class="social-icons">
                     <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <!-- Updated Form for Netlify -->
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
         </div>
     </div>
+</div>
     <div class="copyright">
         <p>Portfolio <i class="fas fa-heart"></i> by Ronil Patel</a></p>
     </div>
-</div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {

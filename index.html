@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="/images/hi.png" type="image/png">
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +17,6 @@
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#services">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-times" onclick="closemenu()"></i>
@@ -37,33 +38,39 @@
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Projects</h1>
+        <p class="ideas">Click or Tap The Cards below!</p>
         <div class="work-list">
             <div class="work">
-                <img src="images/work-1.png">
+                <img src="images/snakee.png">
                 <div class="layer">
-                    <h3>Social Media App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <h3>Serphant Safari🐍</h3>
+                    <p>Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</p>
+                    <a href="portfolio.html"><i class="fas fa-external-link-alt"></i></a>
+
                 </div>
+                <p class="card-title">Serphant Safari🐍</p>
             </div>
             <div class="work">
-                <img src="images/work-2.png">
+                <img src="images/numberguesser.png">
                 <div class="layer">
-                    <h3>Music App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <h3>Number Guesser🤨</h3>
+                    <p>Are you ready to test your luck? Guess the magical random number and see if you can beat the high score.</p>
+                    <a href="portfolio.html"><i class="fas fa-external-link-alt"></i></a>
                 </div>
+                <p class="card-title">Number Guesser🤨</p>
             </div>
             <div class="work">
-                <img src="images/work-3.png">
+                <img src="images/shoescope.png">
                 <div class="layer">
-                    <h3>Online Shopping App</h3>
-                    <p>The app connects you yo the talented people around the world. Download it from play store.</p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    <h3>ShoeScope👟</h3>
+                    <p>Find your perfect pair of shoes with ShoeScope. Discover the perfect fit for the best price.</p>
+                    <a href="portfolio.html"><i class="fas fa-external-link-alt"></i></a>
+
                 </div>
+                <p class="card-title">ShoeScope👟</p>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="portfolio.html" class="btn">See more</a>
     </div>
 </div>
 <!-- ----------contact------------- -->
@@ -76,23 +83,27 @@
                 <p><i class="fas fa-phone-square-alt"></i> (803)-729-6552</p>
                 <div class="social-icons">
                     <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a href=""><i class="fab fa-twitter-square"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <!-- Updated Form for Netlify -->
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
                 <span id="msg"></span>
             </div>
         </div>
     </div>
+</div>
+
     <div class="copyright">
         <p>Portfolio <i class="fas fa-heart"></i> by Ronil Patel</a></p>
     </div>
