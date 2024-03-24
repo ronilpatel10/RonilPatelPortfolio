@@ -1,7 +1,7 @@
-Ronil Patel's Portfolio Website
-Welcome to my personal portfolio website⭐️! This site is a representation of my journey as a software engineer, showcasing my projects, skills, and professional milestones. Designed to be responsive, it ensures an optimal viewing experience across a wide range of devices.
+Ronil Patel's Portfolio Website⭐️
+Welcome to my personal portfolio website! This site is a representation of my journey as a software engineer, showcasing my projects, skills, and professional milestones. Designed to be responsive, it ensures an optimal viewing experience across a wide range of devices.
 
-Features⭐️
+Features
 Home Section: An introduction to my professional persona.
 About Me: Insights into my background, the technologies I specialize in, and what drives me as a developer.
 Portfolio: A curated collection of my projects, highlighting my expertise in software development.
