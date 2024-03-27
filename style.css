@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+.li{
+    list-style: none;
+}
 .linkedin-logo {
     max-width: 100px;
     margin-left: 40px;
@@ -13,6 +16,7 @@
     text-align: center;
     margin-left: 100px;
     margin-top: 15px;
+    color: #fff;
 }
 #cards {
     display: flex;
@@ -494,7 +498,7 @@ nav ul li a:hover::after{
 /* -----------about--------------- */
 #about{
     padding: 80px 0;
-    color: #ababab;
+   
 }
 .about-col-1 {
     width: 40%; /* Adjust the width as needed */
@@ -935,3 +939,245 @@ nav .fas{
     margin-top: -40px;
     display: block;
 }
+
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* This will automatically fit 3 items in a row on desktop */
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #262626;
+    color: #fff;
+    transition: transform 0.3s ease; /* Smooth transition for hover effects */
+    width: 100%;
+}
+
+.work img {
+    width: 100%;
+    transition: transform 0.5s; /* Smooth transition for scale effect */
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.work:hover .layer {
+    height: 100%; /* Full height on hover */
+}
+
+.work:hover img {
+    transform: scale(1.05); /* Slight increase in size on hover */
+}
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 768px) {
+    .work {
+        margin:  0 auto !important;
+    }
+    .work-list {
+        grid-template-columns: 1fr; /* Only 1 item per row on mobile */
+    }
+}
+
+/* General styles, applying to both desktop and mobile */
+#contact {
+    background: #262626; /* Optional: background color for the contact section */
+    color: #fff; /* Ensures text is white for contrast */
+}
+
+#contact .container {
+    max-width: 1200px; /* Adjust based on preference */
+    margin: auto; /* Centers the container */
+    padding: 20px;
+}
+
+#contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures space between left and right on desktop */
+}
+
+.contact-left, .contact-right {
+    /* Initial basis before media query adjustments */
+    flex-basis: 48%; /* Adjusts to almost half the container's width for desktop */
+    margin-top: 30px;
+}
+
+.contact-left p, .contact-right form {
+    margin-left: 25px; /* Consistent left margin for inner content */
+}
+
+.contact-left p i, .social-icons a i {
+    color: #ff004f; /* Brand color for icons */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: start; /* Aligns social icons to the start */
+    flex-wrap: wrap;
+    margin-left: 25px;
+}
+
+.social-icons a {
+    display: inline-flex; /* Allows for center alignment of icons */
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Fixed size for icons */
+    height: 40px;
+    margin-right: 10px; /* Space between icons */
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.btn.btn2, form .btn2 {
+    display: block; /* Makes button full width of its container */
+
+    margin: 20px 0; /* Adds margin on top and bottom */
+}
+
+/* Input and textarea styling */
+form input, form textarea {
+    background: #1e1e1e; /* Slightly lighter than the section background for contrast */
+    color: #fff; /* White text */
+    border: 1px solid #ff004f; /* Adds a subtle border */
+    padding: 12px; /* Padding for text area */
+    margin-bottom: 16px; /* Margin between form fields */
+}
+
+/* Responsive adjustments for mobile */
+@media only screen and (max-width: 768px) {
+    .contact-left, .contact-right {
+        flex-basis: 100%; /* Takes the full width of the container on small screens */
+        margin-left: 0; /* Resets left margin for alignment */
+    }
+
+    .social-icons {
+        margin-top: 20px; /* Adds space above the icons */
+    }
+
+    form input, form textarea, .btn.btn2, form .btn2 {
+        width: calc(100% - 50px); /* Adjusts width to ensure it doesn't overflow the parent container */
+       
+    }
+}
+
+/* Copyright styling adjustments */
+.copyright {
+    font-size: 14px; /* Adjusts the font size for readability */
+    padding: 15px 0; /* Adjusts padding for a more compact look */
+    background: #1e1e1e; /* Matches the form background for consistency */
+}
+
+/* Base styles for the "About" section */
+#about {
+    padding: 80px 0;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures proper spacing between columns */
+}
+
+/* Styling for the left column of the "About" section */
+.about-col-1 {
+    flex: 1;
+    margin-right: 2%; /* Adjust based on preference */
+    text-align: center; /* Centers content on mobile */
+}
+
+/* Styling for the profile picture */
+.about-col-1 .profile-pic {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Styling for the right column of the "About" section */
+.about-col-2 {
+    flex: 2;
+    padding-left: 20px;
+}
+
+/* Styling for tab titles and contents */
+.tab-titles, .nested-tab-titles {
+    display: flex;
+    justify-content: center; /* Center tabs on mobile */
+    flex-wrap: wrap;
+}
+.tab-links, .nested-tab-links {
+    margin: 10px;
+    cursor: pointer;
+    color: #ff004f;
+}
+.tab-contents, .nested-tab-contents {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    /* Stacks columns vertically on smaller screens */
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+        margin: 0 0 20px 0; /* Adds margin to the bottom for spacing */
+        padding: 0 15px; /* Adds padding for better content readability */
+    }
+
+    .about-col-2 {
+        /* Additional styling if needed for mobile */
+    }
+
+    .tab-titles, .nested-tab-titles {
+        flex-direction: column; /* Stacks tabs vertically on smaller screens */
+    }
+
+    .github-link, .h4 {
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    #cards {
+        display: flex;
+        margin:  0 auto;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Adjusts the space between cards */
+    }
+}
+
+/* Ensures content within the right column is well-presented on mobile */
+.about-col-2 .card {
+    background-color: #000000; /* Or any color that fits your design */
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 20px; /* Adds spacing between cards */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
+}
+
+
