@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -33,13 +35,12 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1"><br>
-                    <img src="images/user.png" alt="Ronil Patel" class="profile-pic">
-                    <p class="ideas">Click The Tabs Below!</p>
+                <div class="about-col-1 "><br>
+                    <h2 class="wave">Explore my skills by navigating through the tabs below!</h2>
                     <div class="tab-titles">
                         <!-- Add your resume sections as tab titles -->
-                        <p class="tab-links active-link" onclick="opentab('experience')">Career Exp.</p>
-                        <p class="tab-links" onclick="opentab('skills')">|Tech Skills| </p>
+                        <p class="tab-links active-link" onclick="opentab('experience')">Career Experience</p>
+                        <p class="tab-links" onclick="opentab('skills')">|Technical Skills| </p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
                         
                     </div>
@@ -48,8 +49,10 @@
                         <!-- Career Experience section -->
                         
                         
-                                <h2><strong><span>Software Developer at Integ Enterprise Consulting</span></strong></h2><br>
-                                <span class="date">Feb 2022 - Dec 2023</span>
+                                <h2 class="subs-title"><strong><span>Career Experience</span></strong></h2><br>
+                                <h3>Software Developer at Integ Enterprise Consulting</h3>
+                                <span class="date">Feb 2022 - Dec 2023</span><br>
+                                <br>
                                 
                                 <li>Played a key role in full-stack development projects, contributing to both front-end and back-end components of enterprise software solutions.</li>
                                 <li>Developed and maintained user interfaces using HTML, JavaScript, and React, ensuring responsive and intuitive user experiences.</li>
@@ -64,75 +67,141 @@
                     </div>
                     
                     
+                    <style>
+                        /* Styles for the pop-up window */
+                        .popup {
+                            display: none;
+                            position: fixed;
+                            z-index: 1;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            overflow: auto;
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
+                    
+                        .popup-content {
+                            background-color: gray;/* Light grey background color */
+                            margin: 10% auto;
+                            padding: 20px;
+                            border-radius: 5px;
+                            width: 80%;
+                            max-width: 600px;
+                            display: flex;
+                            flex-wrap: wrap; /* Allow skills to wrap into multiple rows */
+                            justify-content: space-between; /* Evenly distribute skills horizontally */
+                        }
+                    
+                        .skill-card {
+                            background-color: #222;
+                            padding: 20px;
+                            margin-bottom: 10px;
+                            border-radius: 5px;
+                            display: flex;
+                            align-items: center;
+                            flex-basis: calc(25% - 20px); /* 25% width with 20px margin between cards */
+                        }
+                    
+                        .tech-logos {
+                            width: 50px;
+                            margin-right: 20px;
+                        }
+                    
+                        .tech-name {
+                            color: #fff;
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+                        
+                        .close-button {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            cursor: pointer;
+                        }
+                    </style>
+                    
+                    <!-- JavaScript to toggle visibility of the pop-up window -->
+                    <script>
+                        function togglePopup() {
+                            var popup = document.getElementById("popup");
+                            if (popup.style.display === "block") {
+                                popup.style.display = "none";
+                            } else {
+                                popup.style.display = "block";
+                            }
+                        }
+                    </script>
+                    
                     <div class="tab-contents" id="skills">
-                        <h2>Technical Skills</h2>
-                        <div class="nested-tab-titles">
-                            <p class="nested-tab-links" onclick="openNestedTab(event, 'FrontEnd')">Front-end |</p>
-                            <p class="nested-tab-links" onclick="openNestedTab(event, 'BackEnd')">Back-end |</p>
-                            <p class="nested-tab-links" onclick="openNestedTab(event, 'AllSkills')">Tech Skills</p>
-                        </div>
-                        <div class="nested-tab-contents" id="FrontEnd">
-                            <!-- Front-end skills here -->
+                        <h2 class="subs-titles" onclick="opentab('skills')">Click To View Technical Skills</h2>
+                    </div>
+                    
+                    <!-- The pop-up window -->
+                    <div id="popup" class="popup">
+                        <span class="close-button" onclick="togglePopup()">&times;</span>
+                        <div class="popup-content">
+                            <!-- Insert all skill cards here -->
+                            <!-- Include other skill cards similarly -->
                             <div class="skill-card">
-                                <img src="images/HTML.png" alt="HTML Logo" class="tech-logos">
-                                <p>HTML</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/react.png" alt="React Logo" class="tech-logos">
-                                <p>React</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/JavaScript-logo.png" alt="JavaScript Logo" class="tech-logos">
-                                <p>JavaScript</p>
-                            </div>
-                           
-                        </div>
-                        <div class="nested-tab-contents" id="BackEnd">
-                            <!-- Back-end skills here -->
-                            <div class="skill-card">
-                                <img src="images/aws.png" alt="AWS Logo" class="tech-logos">
-                                <p>AWS</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/c--4.svg" alt="c# Logo" class="tech-logos">
-                                <p>C#</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/nodejs.svg" alt="Node.js Logo" class="tech-logos">
-                                <p>Node.js</p>
+                                <img src="images/c--4.svg" alt="C# Logo" class="tech-logos">
+                                <p class="tech-name">C#</p>
                             </div>
                             <div class="skill-card">
                                 <img src="images/mongos.png" alt="MongoDB Logo" class="tech-logos">
-                                <p>MongoDB</p>
+                                <p class="tech-name">MongoDB</p>
                             </div>
                             <div class="skill-card">
                                 <img src="images/python.png" alt="Python Logo" class="tech-logos">
-                                <p>Python</p>
+                                <p class="tech-name">Python</p>
                             </div>
                             <div class="skill-card">
                                 <img src="images/flask.png" alt="Flask Logo" class="tech-logos">
-                                <p>Flask</p>
+                                <p class="tech-name">Flask</p>
                             </div>
-                            
-                        </div>
-                        <div class="nested-tab-contents" id="AllSkills">
-                            <!-- All skills here, similar to the existing content -->
+                            <div class="skill-card">
+                                <img src="images/HTML.png" alt="HTML Logo" class="tech-logos">
+                                <p class="tech-name">HTML</p>
+                            </div>
+                            <div class="skill-card">
+                                <img src="images/react.png" alt="React Logo" class="tech-logos">
+                                <p class="tech-name">React</p>
+                            </div>
+                            <div class="skill-card">
+                                <img src="images/JavaScript-logo.png" alt="JavaScript Logo" class="tech-logos">
+                                <p class="tech-name">JavaScript</p>
+                            </div>
+                            <div class="skill-card">
+                                <img src="images/macos.svg" alt="macOS Logo" class="tech-logos">
+                                <p class="tech-name">macOS</p>
+                            </div>
+                            <div class="skill-card">
+                                <img src="images/aws.png" alt="AWS Logo" class="tech-logos">
+                                <p class="tech-name">AWS</p>
+                            </div>
                             <div class="skill-card">
                                 <img src="images/githublogo.png" alt="GitHub Logo" class="tech-logos">
-                                <p>GitHub</p>
+                                <p class="tech-name">GitHub</p>
                             </div>
                             <div class="skill-card">
                                 <img src="images/vscode.svg" alt="VSCode Logo" class="tech-logos">
-                                <p>VSCode</p>
-                            </div><div class="skill-card">
-                                <img src="images/json-web-token.svg" alt="JSON Web Token Logo" class="tech-logos">
-                                <p>JSON Web Token</p> <div class="skill-card">
+                                <p class="tech-name">VSCode</p>
                             </div>
-                            <img src="images/macos.svg" alt="macOS Logo" class="tech-logos">
-                            <p>macOS</p>
-                        </div>
+                            <div class="skill-card">
+                                <img src="images/json-web-token.svg" alt="JSON Web Token Logo" class="tech-logos">
+                                <p class="tech-name">JSON Web Token</p>
+                            </div>
+                            <div class="skill-card">
+                                <img src="images/nodejs.svg" alt="Node.js Logo" class="tech-logos">
+                                <p class="tech-name">Node.js</p>
+                            </div>
+                            <!-- Include other skills as needed -->
+                            <button class="close-button-on-card" onclick="togglePopup()">Close</button>
+                            
                         </div>
                     </div>
+                    
                     
                     
                     
@@ -140,7 +209,7 @@
                 
                     <div class="tab-contents" id="education">
                         <!-- Education section -->
-                        <h2>Education</h2>
+                        <h2 class="subs-title">Education</h2>
                         <ul>
                             <li><span>March 2022 - October 2023</span><br>FlatIron School, New York - Full Stack Developer, Software Engineering</li>
                             <!-- Add more education entries -->
@@ -154,43 +223,45 @@
                     </div>
                 <br>
             </div>
-            <div class="about-col-2">
+            <div class="about-stuff">
                 <!-- Who Am I Section -->
                 <div class="card who-am-i">
+                    <img src="images/user.png" alt="Ronil Patel" class="profile-pic">
                     <h1 class="sub-title">Who am I?</h1>
-                    <p>I'm Ronil Patel, a passionate software developer dedicated to using technology to drive positive change. With a strong foundation in full-stack development and a commitment to continuous learning. </p>
-<br><p>I focus on solving real-world problems through innovative solutions. Leveraging a diverse skill set, I strive to make a meaningful impact in empowering individuals, businesses, and communities through technology.</p>
+                    <p>I'm Ronil Patel, a passionate software developer dedicated to driving positive change through technology.</p>
+                    <p>I focus on solving real-world problems through innovative solutions and strive to make a meaningful impact in empowering individuals, businesses, and communities.</p>
                 </div>
             
                 <!-- Fun Facts Section -->
                 <div class="card fun-facts">
                     <h2 class="sub-title">Fun Facts About Me</h2>
                     <ul>
-                        <li><strong>First Programming Language:</strong> I started my programming journey with Python🐍, and I picked up on it pretty easy when I started and it helped me understand what the coding world is like.</li>
-                        <li><strong>Favorite TV Shows:</strong> Game Of Thrones🗡️, Breaking Bad🔫, Friends📺, The Boys🦹‍♂️, Prison Break🚨, and Avatar The Last Air Bender💨</li>
-                        <li><strong>Hobby:</strong> When I'm not coding, I love to play basketball🏀, read books📚, try new things out🎍, and capture nature's beauty through photography📸.</li>
-                        <!-- Add more fun facts as desired -->
+                        <li><strong>First Programming Language:</strong> Python 🐍</li>
+                        <li><strong>Favorite TV Shows:</strong> Game Of Thrones, Breaking Bad, Friends, The Boys, Prison Break, Avatar The Last Airbender</li>
+                        <li><strong>Hobbies:</strong> Playing basketball 🏀, reading books 📚, trying new things out 🎍, capturing nature's beauty through photography 📸</li>
+                        <li><strong>Travel Experiences:</strong> Explored Europe, including Switzerland🇨🇭, Greece🇬🇷, and Italy🇮🇹</li>
+                        <li><strong>Favorite Quote:</strong> "Success is the sum of small efforts, repeated day in and day out." - Robert Collier at the end of the day just be consistent!</li>
                     </ul>
                 </div>
-                 <!-- Soft Skills Section -->
-                 <div class="card soft-skills">
+            
+                <!-- Soft Skills Section -->
+                <div class="card soft-skills">
                     <h2 class="sub-title">Soft Skills</h2>
                     <ul>
-                        <li><strong>Communication</li>
-                        <li><strong>Teamwork</li>
-                        <li><strong>Problem-Solving</li>
-                        <li><strong>Adaptability</li>
-                        <li><strong>Time Management</li>
-                        <li><strong>Leadership</li>
-                        <li><strong>Creativity</li>
-                        <li><strong>Emotional Intelligence
-                        <li><strong>Critical Thinking</li>
-                        <li><strong>Resilience</li>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Problem-Solving</li>
+                        <li>Adaptability</li>
+                        <li>Time Management</li>
+                        <li>Leadership</li>
+                        <li>Creativity</li>
+                        <li>Emotional Intelligence</li>
+                        <li>Critical Thinking</li>
+                        <li>Resilience</li>
                     </ul>
                 </div>
             </div>
             
-        </div>
     </div>
 </div>
 <!-- ----------contact------------- -->
@@ -273,9 +344,9 @@ function opentab(tabName) {
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabName).style.display = "block";
 
-    // If Technical Skills tab is clicked, display Front-end nested tab
+    // If Tech Skills tab is clicked, open the pop-up window
     if (tabName === "skills") {
-        document.getElementById("FrontEnd").style.display = "block";
+        togglePopup();
     }
 }
 

@@ -4,9 +4,162 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+/* Styles for all sections */
+.about-stuff {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: #1f1f1f; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    width: 100%; /* Full width by default */
+    max-width: 350px; /* Maximum width for larger screens */
+}
+
+
+.card h1.sub-title,
+.card h2.sub-title {
+    color: #00ff73; /* Accent color for section title */
+    margin-bottom: 20px;
+}
+
+.card p,
+.card li {
+    margin-bottom: 10px; /* Adjust spacing between paragraphs and list items */
+}
+
+/* Media query for smaller screens like iPhone 14 */
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%; /* Full width for smaller screens */
+        max-width: none; /* Remove maximum width */
+    }
+}
+
+
+/* Styles for the "Education" section */
+#education {
+    background-color: #1f1f1f; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#education h2.subs-title {
+    color: #00ff73; /* Accent color for section title */
+    margin-bottom: 20px;
+}
+
+#education ul {
+    padding-left: 20px; /* Adjust indentation for list items */
+}
+
+#education li {
+    margin-bottom: 10px;
+    list-style-type: disc; /* Bullet points */
+}
+
+#education li:last-child {
+    margin-bottom: 0; /* Remove margin for last item */
+}
+
+.wave{
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 5px #00ff73, 0 0 10px #00ff73, 0 0 20px #00ff73, 0 0 40px #00ff73;
+    animation: glow 1.5s infinite alternate;
+}
+/* Styles for the "Career Experience" section */
+#experience {
+    background-color: #1f1f1f; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#experience h2.subs-title {
+    color: #00ff73; /* Accent color for section title */
+    margin-bottom: 20px;
+}
+
+#experience h3 {
+    color: #ff004f;
+}
+
+#experience .date {
+    color: #ccc; /* Date color */
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+#experience li {
+    margin-bottom: 10px;
+    list-style-type: disc; /* Bullet points */
+}
+
+#experience li:last-child {
+    margin-bottom: 0; /* Remove margin for last item */
+}
+
+/* Add this CSS to highlight the active tab in green */
+.tab-links.active-link {
+    color: #00ff73; /* Green color for active tab */
+}
+
 .li{
     list-style: none;
 }
+/* CSS for the Close button */
+.close-button-on-card {
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif; /* Montserrat font */
+    margin-right: 150px;
+    display: inline-block; /* Make the button inline-block to align horizontally */
+    background-color: transparent; /* Transparent background */
+    color: #000; /* Black text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding around the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: color 0.3s; /* Smooth transition for text color */
+    border-color: red;
+}
+
+.close-button-on-card:hover {
+    border-color: red;
+    color: #ff0000; /* Red text color on hover */
+}
+
+
+.close-button {
+    margin-top: 10px;
+    padding: 10px 20px; /* Add padding for better clickability */
+    background-color: #fff; /* Background color */
+    border: 2px solid #ff0000; /* Red border */
+    color: #ff0000; /* Red text color */
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add transition for smoother hover effect */
+}
+
+/* Hover effect */
+.close-button:hover {
+    background-color: #ff0000; /* Red background color */
+    color: #fff; /* White text color */
+    border-color: #fff; /* White border color */
+}
+
+
 .linkedin-logo {
     max-width: 100px;
     margin-left: 40px;
@@ -334,7 +487,7 @@
   }
   
   .text {
-    color: #f2f2f2;
+    color: #00ff73;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -401,9 +554,23 @@
     }
 }
 h2{
+    color: #00ff73;
     margin-top: 10px;
     font-size: 18px;
     margin-bottom: 10px;
+    cursor: pointer;
+    animation: float 5s ease-in-out infinite; /* Applies a floating effect */
+    /* margin-right: 75px; */
+    
+
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+
+}
+
 
 }
 @keyframes float {
@@ -539,9 +706,9 @@ nav ul li a:hover::after{
 
 .about-col-1 img {
     display: block;
-    width: 145px; /* Adjust to fit within the container, 100% or less */
+ 
     max-width: 600px; /* Optional: you can set a max-width if you want */
-    margin: 0 auto; /* Auto margins to center the image */
+    margin-left: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgb(255, 255, 255);
 }
@@ -594,7 +761,7 @@ nav ul li a:hover::after{
 /* Shared Styles for Main and Nested Tab Links */
 .tab-links, .nested-tab-links {
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
     position: relative;
@@ -607,8 +774,9 @@ nav ul li a:hover::after{
 }
 
 .tab-links:hover, .nested-tab-links:hover {
-    color: #ff004f; /* Hover color */
-    text-shadow: 0 0 10px #ff004f, 0 0 20px #ff004f, 0 0 30px #ff004f, 0 0 40px #ff004f, 0 0 50px #ff004f, 0 0 60px #ff004f; /* Glowing effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Adjust the values as needed */
+    color: #00ff73; /* Hover color */
+
 }
 
 .tab-links:hover::after, .nested-tab-links:hover::after {
@@ -1121,25 +1289,32 @@ form input, form textarea {
 
 /* Styling for the right column of the "About" section */
 .about-col-2 {
+    margin-bottom: 20px;
     flex: 2;
     padding-left: 20px;
 }
 
 /* Styling for tab titles and contents */
+/* Apply glow effect to tab titles */
 .tab-titles, .nested-tab-titles {
     display: flex;
     justify-content: center; /* Center tabs on mobile */
     flex-wrap: wrap;
 }
+
 .tab-links, .nested-tab-links {
     margin: 10px;
     cursor: pointer;
-    color: #ff004f;
+    color: hsla(39, 100%, 68%, 1);
+    /* Add glow effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Adjust the values as needed */
 }
+
 .tab-contents, .nested-tab-contents {
     text-align: center;
     margin-top: 20px;
 }
+
 
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
