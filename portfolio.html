@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Ronil Patel</title>
     <link rel="stylesheet" href="style.css">
-   <script src="https://kit.fontawesome.com/e3c8062751.js" crossorigin="anonymous"></script>
- 
+    <script src="https://kit.fontawesome.com/e3c8062751.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -29,52 +28,90 @@
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Technical Projects</h1>
-        <h2 class="port-text">⭐️⭐️Click the videos below to see the live demo (stick to end to hear about the code!) and make sure to click the full screen button and change the resolution if needed to get the full experience!⭐️⭐️</h2>
+        <h2 class="port-text">⭐️⭐️Click the Quick portoflio overview button to get a glimpose of my projects below to see a live demo or click the Through Development Overview to get a deeper look and make sure to click the full screen button and change the resolution if needed to get the full experience!⭐️⭐️</h2>
         <div class="work-list">
         </div>  
             
 </div>
-<div id="cards">
-            <iframe src="https://drive.google.com/file/d/19rGiQiPzhE7gnFzB7GuoTrgGJf-j6uoi/preview" width="640" height="480" allowfullscreen></iframe>
-            <div class="work"> 
-                <p>Project: Serpent Safari🐍 - Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</p>
-                <button class="show-details-btn">Show Details</button>
-                <ul class="portfolio-details">
-                   
-                    <li>Dynamic Maze Generation: Each playthrough offers a unique maze layout, ensuring fresh challenges and endless replayability. Navigate through narrow corridors and open spaces while avoiding dead ends and obstacles.</li>
-                    <li>Power-ups and Abilities: Discover power-ups scattered throughout the maze, granting temporary boosts and abilities. Double your score, unlock rainbow mode for colorful visuals, and more. Choose when to activate these power-ups strategically to maximize your score.</li>
-                    <li>Immersive Visuals and Sound: Immerse yourself in vibrant, visually appealing graphics and animations. From lush maze environments to sleek snake animations, every detail enhances the gaming experience. Dynamic sound effects and background music further elevate the immersion, creating an engaging auditory experience.</li>
-                    <li>Highscore Tracking: Compete against yourself and other players by aiming for the highest score. Track your progress and achievements as you strive to climb the leaderboard and cement your place as the ultimate maze master.</li>
-                    <li>Intuitive Controls and User Interface: Enjoy seamless gameplay with intuitive controls designed for ease of use. Navigate menus and options effortlessly, allowing you to focus on the action-packed gameplay without distractions.</li>
-                    <li>Customizable Settings: Tailor your gaming experience to your preferences with customizable settings. Adjust audio, graphics, and control options to suit your playstyle and device specifications.</li>
-                    <li>Multi-platform Compatibility: Play Snake Adventure: Maze Mayhem across a variety of platforms, including PC, mobile devices, and gaming consoles. Seamlessly switch between devices without losing progress, ensuring you can enjoy the game anytime, anywhere.</li>
-                </ul>
-            </div>
-            
-            <a class = "github-link" href="https://github.com/ronilpatel10/phase3-project" target="_blank" rel="noopener noreferrer">
-                <h4>To see the Repository on the GitHub Click Below!</h4><img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
-              </a>
-        </div>
+<div class="container">
+    <div class="animated-button-container">
+        <!-- Short Version Button -->
+        <button class="animated-button" onclick="toggleVersion('shortVersion')">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+            </svg>
+            <span class="text">Quick Portfolio Overview </span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+            </svg>
+        </button>
         
-        <!-- Number Guesser Video -->
-        <div id="cards">
-        <iframe src="https://drive.google.com/file/d/14VhwhfJRwP_wOUMPVHFP_jMp1qzOG1PH/preview" width="640" height="480" allowfullscreen></iframe>
+        <!-- Extended Version Button -->
+        <button class="animated-button" onclick="toggleVersion('extendedVersion')">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+            </svg>
+            <span class="text">Thorough Development Overview</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                ></path>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+<!-- Container for the extended version -->
+<div id="extendedVersion" style="display: none;">
+    <div id="cards">
+        <iframe src="https://drive.google.com/file/d/1E52qHZu6UdCotLTkEtOhKcdLdoi_AB1L/preview" width="640" height="480" allowfullscreen></iframe>
+        <div class="work"> 
+            <p>Project: Serpent Safari🐍 - Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</p>
+            <button class="show-details-btn">Show Details</button>
+            <ul class="portfolio-details">
+                <li>Dynamic Maze Generation: Each playthrough offers a unique maze layout, ensuring fresh challenges and endless replayability. Navigate through narrow corridors and open spaces while avoiding dead ends and obstacles.</li>
+                <li>Power-ups and Abilities: Discover power-ups scattered throughout the maze, granting temporary boosts and abilities. Double your score, unlock rainbow mode for colorful visuals, and more. Choose when to activate these power-ups strategically to maximize your score.</li>
+                <li>Immersive Visuals and Sound: Immerse yourself in vibrant, visually appealing graphics and animations. From lush maze environments to sleek snake animations, every detail enhances the gaming experience. Dynamic sound effects and background music further elevate the immersion, creating an engaging auditory experience.</li>
+                <li>Highscore Tracking: Compete against yourself and other players by aiming for the highest score. Track your progress and achievements as you strive to climb the leaderboard and cement your place as the ultimate maze master.</li>
+                <li>Intuitive Controls and User Interface: Enjoy seamless gameplay with intuitive controls designed for ease of use. Navigate menus and options effortlessly, allowing you to focus on the action-packed gameplay without distractions.</li>
+                <li>Customizable Settings: Tailor your gaming experience to your preferences with customizable settings. Adjust audio, graphics, and control options to suit your playstyle and device specifications.</li>
+                <li>Multi-platform Compatibility: Play Snake Adventure: Maze Mayhem across a variety of platforms, including PC, mobile devices, and gaming consoles. Seamlessly switch between devices without losing progress, ensuring you can enjoy the game anytime, anywhere.</li>
+            </ul>
+        </div>
+        <a class="github-link" href="https://github.com/ronilpatel10/phase3-project" target="_blank" rel="noopener noreferrer">
+            <h4>To see the Repository on GitHub, Click Below!</h4>
+            <img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+        </a>
+    </div>
     
+    <!-- Number Guesser Video -->
+    <div id="cards">
+        <iframe src="https://drive.google.com/file/d/14VhwhfJRwP_wOUMPVHFP_jMp1qzOG1PH/preview" width="640" height="480" allowfullscreen></iframe>
         <div class="work">
-            <!-- Updated button with onclick attribute for toggling details --><p>Project: Number Guesser🤨- A console application that challenges users to guess a randomly generated number within a specified range.</p>
+            <p>Project: Number Guesser🤨- A console application that challenges users to guess a randomly generated number within a specified range.</p>
             <button class="show-details-btn" onclick="toggleDetails('numberGuesserDetails')">Show Details</button>
             <ul class="portfolio-details" id="numberGuesserDetails" style="display:none;">
-                <!-- Your project details here -->
                 <li>Features multiple difficulty levels, robust input validation, and a structured approach to programming.</li>
                 <li>Highlights the importance of user interaction, clear code structure, and the .NET framework's capabilities.</li>
                 <li>Reflects on learnings about software development, emphasizing code readability, maintainability, and user experience.</li>
                 <li>For more insights, including a code walkthrough and live demo, check the video above.</li>
             </ul>
         </div>
-        <a class = "github-link" href="https://github.com/ronilpatel10/SharpProject" target="_blank" rel="noopener noreferrer">
-            <h4>To see the Repository on the GitHub Click Below!</h4><img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
-          </a>
+        <a class="github-link" href="https://github.com/ronilpatel10/SharpProject" target="_blank" rel="noopener noreferrer">
+            <h4>To see the Repository on GitHub, Click Below!</h4>
+            <img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+        </a>
     </div>
+    
     <div id="cards">
         <iframe src="https://drive.google.com/file/d/1sIb2mdWE6gtHcRfdqpkgdUaYds2I4Y-f/preview" width="640" height="480" allowfullscreen></iframe>
         <div class="work">
@@ -90,17 +127,78 @@
                 <li>The project emphasizes modern web development practices, including RESTful API design, security considerations with JWT authentication, and user experience design principles.</li>
                 <li>For more insights, including a code walkthrough and live demo, check the video above.</li>
             </ul>
-            
         </div>
-        <a class = "github-link" href="https://github.com/ronilpatel10/Shoe-project-2" target="_blank" rel="noopener noreferrer">
-            <h4>To see the Repository on the GitHub Click Below!</h4><img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
-          </a>
+        <a class="github-link" href="https://github.com/ronilpatel10/Shoe-project-2" target="_blank" rel="noopener noreferrer">
+            <h4>To see the Repository on GitHub, Click Below!</h4>
+            <img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+        </a>
     </div>
-    </div>
-            
 </div>
 
-
+<!-- Container for the short version -->
+<div id="shortVersion" style="display: none;">
+    <div id="cards">
+        <iframe src="https://drive.google.com/file/d/1Hq1Le2UKHgd_VQKNMz-aOrBqYr2sul8i/preview" width="640" height="480" allowfullscreen></iframe>
+        <div class="work">
+    <p>Project: Number Guesser🤨- A console application that challenges users to guess a randomly generated number within a specified range.</p>
+    <button class="show-details-btn" onclick="toggleDetails('numberGuesserDetails')">Show Details</button>
+    <ul class="portfolio-details" id="numberGuesserDetails" style="display:none;">
+        <li>Features multiple difficulty levels, robust input validation, and a structured approach to programming.</li>
+        <li>Highlights the importance of user interaction, clear code structure, and the .NET framework's capabilities.</li>
+        <li>Reflects on learnings about software development, emphasizing code readability, maintainability, and user experience.</li>
+        <li>For more insights, including a code walkthrough and live demo, check the video above.</li>
+    </ul>
+</div>
+<a class="github-link" href="https://github.com/ronilpatel10/SharpProject" target="_blank" rel="noopener noreferrer">
+    <h4>To see the Repository on GitHub, Click Below!</h4>
+    <img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+</a>
+</div>
+    <div id="cards">
+        <iframe src="https://drive.google.com/file/d/1aYCa0YZ3EtUaIOFeHFYMDey2eD_lpQCn/preview" width="640" height="480" allowfullscreen></iframe>
+        <div class="work"> 
+            <p>Project: Serpent Safari🐍 - Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</p>
+            <button class="show-details-btn" onclick="toggleDetails('serpentSafariDetails')">Show Details</button>
+            <ul class="portfolio-details" >
+                <li>Dynamic Maze Generation: Each playthrough offers a unique maze layout, ensuring fresh challenges and endless replayability. Navigate through narrow corridors and open spaces while avoiding dead ends and obstacles.</li>
+                <li>Power-ups and Abilities: Discover power-ups scattered throughout the maze, granting temporary boosts and abilities. Double your score, unlock rainbow mode for colorful visuals, and more. Choose when to activate these power-ups strategically to maximize your score.</li>
+                <li>Immersive Visuals and Sound: Immerse yourself in vibrant, visually appealing graphics and animations. From lush maze environments to sleek snake animations, every detail enhances the gaming experience. Dynamic sound effects and background music further elevate the immersion, creating an engaging auditory experience.</li>
+                <li>Highscore Tracking: Compete against yourself and other players by aiming for the highest score. Track your progress and achievements as you strive to climb the leaderboard and cement your place as the ultimate maze master.</li>
+                <li>Intuitive Controls and User Interface: Enjoy seamless gameplay with intuitive controls designed for ease of use. Navigate menus and options effortlessly, allowing you to focus on the action-packed gameplay without distractions.</li>
+                <li>Customizable Settings: Tailor your gaming experience to your preferences with customizable settings. Adjust audio, graphics, and control options to suit your playstyle and device specifications.</li>
+                <li>Multi-platform Compatibility: Play Snake Adventure: Maze Mayhem across a variety of platforms, including PC, mobile devices, and gaming consoles. Seamlessly switch between devices without losing progress, ensuring you can enjoy the game anytime, anywhere.</li>
+            </ul>
+        </div>
+        <a class="github-link" href="https://github.com/ronilpatel10/phase3-project" target="_blank" rel="noopener noreferrer">
+            <h4>To see the Repository on GitHub, Click Below!</h4>
+            <img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+        </a>
+    </div>
+    <div id="cards">
+        <iframe src="https://drive.google.com/file/d/1ZnMOKG-w-sz0dnZwfReJFqE2T-xqJZ4H/preview" width="640" height="480" allowfullscreen></iframe>
+        <div class="work">
+            <p>Project: ShoeScope👟 - A web platform dedicated to sneaker enthusiasts and custom shoe designers.</p>
+            <button class="show-details-btn" onclick="toggleDetails('shoeScopeDetails')">Show Details</button>
+            <ul class="portfolio-details" id="shoeScopeDetails" style="display:none;">
+                <li>Enables users to post their custom shoe designs, share photos, and details about the creation process.</li>
+                <li>Features a user rating system, allowing the community to vote on their favorite designs.</li>
+                <li>Incorporates a robust search and filtering system to explore shoes based on style, color, designer, and popularity.</li>
+                <li>Supports user accounts with profile customization, showcasing their designs and interacting with followers.</li>
+                <li>Highlights include a responsive design for mobile and desktop views, ensuring accessibility and user engagement.</li>
+                <li>Technologies Used: React.js for the frontend, SQLite3 for the backend. Cloudinary is used for image storage and management.</li>
+                <li>The project emphasizes modern web development practices, including RESTful API design, security considerations with JWT authentication, and user experience design principles.</li>
+                <li>For more insights, including a code walkthrough and live demo, check the video above.</li>
+            </ul>
+        </div>
+        <a class="github-link" href="https://github.com/ronilpatel10/Shoe-project-2" target="_blank" rel="noopener noreferrer">
+            <h4>To see the Repository on GitHub, Click Below!</h4>
+            <img src="images/githublogo.png" alt="GitHub Logo" class="github-logo" />
+        </a>
+    </div>
+            <!-- Quick tutorial videos here -->
+        </div>
+    </div>
+</div>
 
 <div id="contact">
     <div class="container">
@@ -110,7 +208,6 @@
                 <p><i class="fas fa-paper-plane"></i> ronilpatel1001@gmail.com</p>
                 <p><i class="fas fa-phone-square-alt"></i> (803)-729-6552</p>
                 <div class="social-icons">
-                    
                     <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter-square"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -119,7 +216,6 @@
                 <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <!-- Updated Form for Netlify -->
                 <form name="contact" method="POST" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="text" name="name" placeholder="Your Name" required>
@@ -132,9 +228,81 @@
         </div>
     </div>
 </div>
-    <div class="copyright">
-        <p>Portfolio <i class="fas fa-heart"></i> by Ronil Patel</a></p>
-    </div>
+
+<div class="copyright">
+    <p>Portfolio <i class="fas fa-heart"></i> by Ronil Patel</p>
+</div>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemeu.style.right = "0";
+    }
+
+    function closemenu() {
+        sidemeu.style.right = "-200px";
+    }
+
+    function toggleVersion(version) {
+        var extendedVersion = document.getElementById("extendedVersion");
+        var shortVersion = document.getElementById("shortVersion");
+        var toggleExtendedVersion = document.getElementById("toggleExtendedVersion");
+        var toggleShortVersion = document.getElementById("toggleShortVersion");
+
+        if (version === "extendedVersion") {
+            extendedVersion.style.display = "block";
+            shortVersion.style.display = "none";
+            toggleExtendedVersion.style.display = "none";
+            toggleShortVersion.style.display = "block";
+        } else if (version === "shortVersion") {
+            shortVersion.style.display = "block";
+            extendedVersion.style.display = "none";
+            toggleShortVersion.style.display = "none";
+            toggleExtendedVersion.style.display = "block";
+        }
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const showDetailsBtns = document.querySelectorAll(".show-details-btn");
+
+        showDetailsBtns.forEach(button => {
+            button.addEventListener("click", function() {
+                const details = this.nextElementSibling;
+                details.classList.toggle("visible");
+                if (details.classList.contains("visible")) {
+                    this.textContent = "Hide Details";
+                } else {
+                    this.textContent = "Show Details";
+                }
+            });
+        });
+    });
+
+    function toggleDetails(detailsId) {
+        var detailsElement = document.getElementById(detailsId);
+        var isVisible = detailsElement.classList.contains("visible");
+        detailsElement.classList.toggle("visible", !isVisible);
+        // Update the button text based on the visibility state
+        var showButton = detailsElement.previousElementSibling;
+        showButton.textContent = isVisible ? "Show Details" : "Hide Details";
+    }
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        window.toggleDetails = function(detailsId) {
+            var detailsElement = document.getElementById(detailsId);
+            var isVisible = detailsElement.style.display === "block";
+            detailsElement.style.display = isVisible ? "none" : "block";
+            // Update the button text based on the visibility state
+            detailsElement.previousElementSibling.textContent = isVisible ? "Show Details" : "Show Less";
+        };
+    });
+</script>
+
 
     <script>
 
