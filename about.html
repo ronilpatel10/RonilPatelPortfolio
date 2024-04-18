@@ -1,267 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/hi.png" type="image/png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Ronil Patel</title>
+    <title>Personal Portfolio Website - Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/e3c8062751.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <div id="header">
-        <div class="container">
-            <nav>
-                <ul id="sidemenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer</p>
+            <h1></h1>
         </div>
     </div>
-    
-    <!-- About Me Section -->
-    <!-- -----------about---------- -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1 "><br>
-                    <h2 class="wave">Explore my skills by navigating through the tabs below!</h2>
-                    <div class="tab-titles">
-                        <!-- Add your resume sections as tab titles -->
-                        <p class="tab-links active-link" onclick="opentab('experience')">Career Experience</p>
-                        <p class="tab-links" onclick="opentab('skills')">|Technical Skills| </p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                        
-                    </div>
-                    <!-- Replace the placeholder image with your profile picture -->
-                    <div class="tab-contents" id="experience">
-                        <!-- Career Experience section -->
-                        
-                        
-                                <h2 class="subs-title"><strong><span>Career Experience</span></strong></h2><br>
-                                <h3>Software Developer at Integ Enterprise Consulting</h3>
-                                <span class="date">Feb 2022 - Dec 2023</span><br>
-                                <br>
-                                
-                                <li>Played a key role in full-stack development projects, contributing to both front-end and back-end components of enterprise software solutions.</li>
-                                <li>Developed and maintained user interfaces using HTML, JavaScript, and React, ensuring responsive and intuitive user experiences.</li>
-                                <li>Designed and implemented robust back-end systems using Node.js, Express, and SQL databases to manage data storage and retrieval.</li>
-                                <li>Utilized SQL for database design, query optimization, and data manipulation tasks, ensuring efficient and reliable data storage and retrieval.</li>
-                                <li>Spearheaded the implementation of a new data pipeline, reducing data processing time by 50% through efficient ETL processes and database optimizations.</li>
-                                <li>Collaborated with cross-functional teams to gather requirements, design solutions, and deliver high-quality software products that meet client needs.</li>
-                                <li>Diagnosed and resolved technical issues across the software stack, ensuring optimal system performance and minimal downtime.</li>
-                                <li>Worked in Agile environments, participating in sprint planning, daily stand-ups, and retrospectives to deliver iterative improvements and meet project milestones.</li>
-                              
+</div>
+<img src="images/me.png" alt="Ronil Patel" class="profile-pic">
+<!-- -----------about---------- -->
 
-                    </div>
-                    
-                    
-                    <style>
-                        /* Styles for the pop-up window */
-                        .popup {
-                            display: none;
-                            position: fixed;
-                            z-index: 1;
-                            left: 0;
-                            top: 0;
-                            width: 100%;
-                            height: 100%;
-                            overflow: auto;
-                            background-color: rgba(0, 0, 0, 0.5);
-                        }
-                    
-                        .popup-content {
-                            background-color: gray;/* Light grey background color */
-                            margin: 10% auto;
-                            padding: 20px;
-                            border-radius: 5px;
-                            width: 80%;
-                            max-width: 600px;
-                            display: flex;
-                            flex-wrap: wrap; /* Allow skills to wrap into multiple rows */
-                            justify-content: space-between; /* Evenly distribute skills horizontally */
-                        }
-                    
-                        .skill-card {
-                            background-color: #222;
-                            padding: 20px;
-                            margin-bottom: 10px;
-                            border-radius: 5px;
-                            display: flex;
-                            align-items: center;
-                            flex-basis: calc(25% - 20px); /* 25% width with 20px margin between cards */
-                        }
-                    
-                        .tech-logos {
-                            width: 50px;
-                            margin-right: 20px;
-                        }
-                    
-                        .tech-name {
-                            color: #fff;
-                            font-size: 18px;
-                            font-weight: bold;
-                        }
-                        
-                        .close-button {
-                            position: absolute;
-                            top: 10px;
-                            right: 10px;
-                            cursor: pointer;
-                        }
-                    </style>
-                    
-                    <!-- JavaScript to toggle visibility of the pop-up window -->
-                    <script>
-                        function togglePopup() {
-                            var popup = document.getElementById("popup");
-                            if (popup.style.display === "block") {
-                                popup.style.display = "none";
-                            } else {
-                                popup.style.display = "block";
-                            }
-                        }
-                    </script>
-                    
-                    <div class="tab-contents" id="skills">
-                        <h2 class="subs-titles" onclick="opentab('skills')">Click To View Technical Skills</h2>
-                    </div>
-                    
-                    <!-- The pop-up window -->
-                    <div id="popup" class="popup">
-                        <span class="close-button" onclick="togglePopup()">&times;</span>
-                        <div class="popup-content">
-                            <!-- Insert all skill cards here -->
-                            <!-- Include other skill cards similarly -->
-                            <div class="skill-card">
-                                <img src="images/c--4.svg" alt="C# Logo" class="tech-logos">
-                                <p class="tech-name">C#</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/mongos.png" alt="MongoDB Logo" class="tech-logos">
-                                <p class="tech-name">MongoDB</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/python.png" alt="Python Logo" class="tech-logos">
-                                <p class="tech-name">Python</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/flask.png" alt="Flask Logo" class="tech-logos">
-                                <p class="tech-name">Flask</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/HTML.png" alt="HTML Logo" class="tech-logos">
-                                <p class="tech-name">HTML</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/react.png" alt="React Logo" class="tech-logos">
-                                <p class="tech-name">React</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/JavaScript-logo.png" alt="JavaScript Logo" class="tech-logos">
-                                <p class="tech-name">JavaScript</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/macos.svg" alt="macOS Logo" class="tech-logos">
-                                <p class="tech-name">macOS</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/aws.png" alt="AWS Logo" class="tech-logos">
-                                <p class="tech-name">AWS</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/githublogo.png" alt="GitHub Logo" class="tech-logos">
-                                <p class="tech-name">GitHub</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/vscode.svg" alt="VSCode Logo" class="tech-logos">
-                                <p class="tech-name">VSCode</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/json-web-token.svg" alt="JSON Web Token Logo" class="tech-logos">
-                                <p class="tech-name">JSON Web Token</p>
-                            </div>
-                            <div class="skill-card">
-                                <img src="images/nodejs.svg" alt="Node.js Logo" class="tech-logos">
-                                <p class="tech-name">Node.js</p>
-                            </div>
-                            <!-- Include other skills as needed -->
-                            <button class="close-button-on-card" onclick="togglePopup()">Close</button>
-                            
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    
-                    
-                
-                    <div class="tab-contents" id="education">
-                        <!-- Education section -->
-                        <h2 class="subs-title">Education</h2>
-                        <ul>
-                            <li><span>March 2022 - October 2023</span><br>FlatIron School, New York - Full Stack Developer, Software Engineering</li>
-                            <!-- Add more education entries -->
-                            <li><span>July 2018 - July 2021</span><br>Midlands Technical College, Columbia, SC - Bachelor's Degree in Marketing/Communications</li>
-                        </ul>
-                    </div>
-                
-                    <div class="tab-contents" id="projects">
-                        <!-- Technical Projects section -->
-                        <!-- Include details about your technical projects here -->
-                    </div>
-                <br>
+
+
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <p class="ideas">Click or Tap The Cards below!</p>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/snakee.png">
+                <div class="layer">
+                    <h3>Serphant Safari🐍</h3>
+                    <p>Experience the timeless charm of Snake gameplay reimagined in a maze environment. Maneuver your snake through labyrinthine paths, collecting food to grow longer and increase your score.</p>
+                    <a href="portfolio.html"><i class="fas fa-external-link-alt"></i></a>
+
+                </div>
+                <p class="card-title">Serphant Safari🐍</p>
             </div>
-            <div class="about-stuff">
-                <!-- Who Am I Section -->
-                <div class="card who-am-i">
-                    <img src="images/user.png" alt="Ronil Patel" class="profile-pic">
-                    <h1 class="sub-title">Who am I?</h1>
-                    <p>I'm Ronil Patel, a passionate software developer dedicated to driving positive change through technology.</p>
-                    <p>I focus on solving real-world problems through innovative solutions and strive to make a meaningful impact in empowering individuals, businesses, and communities.</p>
+            <div class="work">
+                <img src="images/numberguesser.png">
+                <div class="layer">
+                    <h3>Number Guesser🤨</h3>
+                    <p>Are you ready to test your luck? Guess the magical random number and see if you can beat the high score.</p>
+                    <a href="portfolio.html"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-            
-                <!-- Fun Facts Section -->
-                <div class="card fun-facts">
-                    <h2 class="sub-title">Fun Facts About Me</h2>
-                    <ul>
-                        <li><strong>First Programming Language:</strong> Python 🐍</li>
-                        <li><strong>Favorite TV Shows:</strong> Game Of Thrones, Breaking Bad, Friends, The Boys, Prison Break, Avatar The Last Airbender</li>
-                        <li><strong>Hobbies:</strong> Playing basketball 🏀, reading books 📚, trying new things out 🎍, capturing nature's beauty through photography 📸</li>
-                        <li><strong>Travel Experiences:</strong> Explored Europe, including Switzerland🇨🇭, Greece🇬🇷, and Italy🇮🇹</li>
-                        <li><strong>Favorite Quote:</strong> "Success is the sum of small efforts, repeated day in and day out." - Robert Collier at the end of the day just be consistent!</li>
-                    </ul>
-                </div>
-            
-                <!-- Soft Skills Section -->
-                <div class="card soft-skills">
-                    <h2 class="sub-title">Soft Skills</h2>
-                    <ul>
-                        <li>Communication</li>
-                        <li>Teamwork</li>
-                        <li>Problem-Solving</li>
-                        <li>Adaptability</li>
-                        <li>Time Management</li>
-                        <li>Leadership</li>
-                        <li>Creativity</li>
-                        <li>Emotional Intelligence</li>
-                        <li>Critical Thinking</li>
-                        <li>Resilience</li>
-                    </ul>
-                </div>
+                <p class="card-title">Number Guesser🤨</p>
             </div>
-            
+            <div class="work">
+                <img src="images/shoescope.png">
+                <div class="layer">
+                    <h3>ShoeScope👟</h3>
+                    <p>Find your perfect pair of shoes with ShoeScope. Discover the perfect fit for the best price.</p>
+                    <a href="portfolio.html"><i class="fas fa-external-link-alt"></i></a>
+
+                </div>
+                <p class="card-title">ShoeScope👟</p>
+            </div>
+        </div>
+        <a href="portfolio.html" class="btn">See more</a>
     </div>
 </div>
 <!-- ----------contact------------- -->
@@ -277,13 +87,14 @@
                     <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter-square"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/ronilpatel10/"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/ronil-patel-6304b423a/"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
                 <!-- Updated Form for Netlify -->
-                <form name="contact" method="POST" data-netlify="true">
+                <form id="contact-form" name="contact" method="POST" action="https://formspree.io/f/mzbnydra">
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
@@ -301,6 +112,47 @@
     </div>
 </div>
 
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var form = this;
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      var msg = document.getElementById('msg');
+      if (xhr.status === 200) {
+        form.reset();
+        msg.innerHTML = "Thank you for your submission!";
+      } else {
+        msg.innerHTML = "Oops! There was a problem submitting your form";
+      }
+    };
+    xhr.send(data);
+  });
+</script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
 <script>
 
     var sidemeu = document.getElementById("sidemenu");
@@ -313,61 +165,69 @@
     }
 
 </script>
-
-<script src="your_script.js"></script> <!-- If you have a JavaScript file -->
 <script>
+    const scriptURL = '< add you own link here >' // add your own app script link here
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
 
-function opentab(tabName) {
-    let tablinks, tabcontents;
-
-    // Main tabs
-    tablinks = document.getElementsByClassName("tab-links");
-    tabcontents = document.getElementsByClassName("tab-contents");
-    for (let tablink of tablinks) {
-        tablink.classList.remove("active-link");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.style.display = "none";
+        }
+        event.currentTarget.classList.add("active-link");
+        event.currentTarget.classList.add("red-underline"); // Add this line
+        document.getElementById(tabname).style.display = "block";
     }
-    for (let tabcontent of tabcontents) {
-        tabcontent.style.display = "none";
+</script>
+<script>
+    const headerTextHTML = "Hi! I'm <span>Ronil Patel</span> I'm a Full Stack Developer with a Special love for Python and JavaScript checkout my favorite projects below!";
+    const typedTextSpan = document.querySelector(".header-text h1");
+    let charIndex = 0;
+    let htmlContent = '';
+
+    function type() {
+        if (charIndex < headerTextHTML.length) {
+            if (headerTextHTML[charIndex] === '<') {
+                // Find the end of the HTML tag
+                let tagEnd = headerTextHTML.indexOf('>', charIndex) + 1;
+                htmlContent += headerTextHTML.slice(charIndex, tagEnd); // Add the HTML tag to the htmlContent
+                charIndex = tagEnd; // Move the charIndex to the end of the HTML tag
+            } else {
+                htmlContent += headerTextHTML[charIndex];
+                charIndex++;
+            }
+            typedTextSpan.innerHTML = htmlContent;
+            setTimeout(type, 60); // Adjust typing speed by changing the timeout value
+        }
     }
 
-    // Nested tabs within Technical Skills
-    let nestedTabLinks = document.getElementsByClassName("nested-tab-links");
-    let nestedTabContents = document.getElementsByClassName("nested-tab-contents");
-    for (let nestedTabLink of nestedTabLinks) {
-        nestedTabLink.classList.remove("active-link");
-    }
-    for (let nestedTabContent of nestedTabContents) {
-        nestedTabContent.style.display = "none";
-    }
-
-    // Activate the clicked tab
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabName).style.display = "block";
-
-    // If Tech Skills tab is clicked, open the pop-up window
-    if (tabName === "skills") {
-        togglePopup();
-    }
-}
+    document.addEventListener("DOMContentLoaded", function() {
+        typedTextSpan.innerHTML = ""; // Clear the text
+        type(); // Start typing effect
+    });
+</script>
 
 
-// This function is specifically for nested tabs within Technical Skills
-function openNestedTab(evt, nestedTabName) {
-    let nestedTabLinks = document.getElementsByClassName("nested-tab-links");
-    let nestedTabContents = document.getElementsByClassName("nested-tab-contents");
-    for (let nestedTabLink of nestedTabLinks) {
-        nestedTabLink.classList.remove("active-link");
-    }
-    for (let nestedTabContent of nestedTabContents) {
-        nestedTabContent.style.display = "none";
-    }
 
-    // Activate the clicked nested tab
-    evt.currentTarget.classList.add("active-link");
-    document.getElementById(nestedTabName).style.display = "block";
-}
-
-
-</script>   
 </body>
 </html>

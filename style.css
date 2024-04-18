@@ -4,6 +4,29 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+/* CSS for h3 element */
+/* CSS for h3 element */
+h3 {
+    font-size: 45px;
+    font-weight: 600;
+    color: #00ff73;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    text-align: center;
+    animation: float 2s ease infinite; /* Applying the float animation */
+}
+
+/* Keyframes for float animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
 .animated-button + .animated-button {
     margin-left: 50px;
 }
@@ -12,7 +35,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   
   .animated-button {
@@ -274,7 +297,8 @@
 }
 #cards {
     display: flex;
-    margin-left: 150px;
+    margin-left: 75px;
+    margin-right: 75px;
     flex-wrap: wrap;
     justify-content: space-between; /* Adjusts the space between cards */
 }
@@ -1205,7 +1229,6 @@ nav .fas{
 }
 #msg{
     color: #61b752;
-    margin-top: -40px;
     display: block;
 }
 
@@ -1456,4 +1479,7 @@ form input, form textarea {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for depth */
 }
 
-
+.Resume {
+    display: block;   /* Makes the image a block element */
+    margin: 40px auto;     /* Automatically calculates equal margins on both sides, centering the image */
+}
