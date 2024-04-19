@@ -18,6 +18,7 @@
                 <li><a href="#header">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <i class="fas fa-times" onclick="closemenu()"></i>
             </ul>
@@ -86,13 +87,14 @@
                     <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-twitter-square"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/ronilpatel10/"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/ronil-patel-6304b423a/"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
                 <!-- Updated Form for Netlify -->
-                <form name="contact" method="POST" data-netlify="true">
+                <form id="contact-form" name="contact" method="POST" action="https://formspree.io/f/myyrlezy">
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
@@ -111,6 +113,27 @@
 </div>
 
 
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var form = this;
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      var msg = document.getElementById('msg');
+      if (xhr.status === 200) {
+        form.reset();
+        msg.innerHTML = "Thank you for your submission!";
+      } else {
+        msg.innerHTML = "Oops! There was a problem submitting your form";
+      }
+    };
+    xhr.send(data);
+  });
+</script>
 
 <script>
 
